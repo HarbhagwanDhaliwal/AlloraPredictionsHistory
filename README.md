@@ -1,83 +1,116 @@
-````markdown
-# AlloraPredictionsHistory
+```markdown
+# AlloraPredictionsHistory 📈⏳
 
-**AlloraPredictionsHistory** is a Python utility designed to fetch historical prediction data from the [Allora](https://allora.network/) blockchain. This tool allows data scientists and researchers to export structured prediction data into Excel format, enabling them to analyze trends and backtest their own custom strategies.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
+[![Allora Chain](https://img.shields.io/badge/Allora-Chain-brightgreen)](https://github.com/allora-network/allora-chain)
 
-![Sample Output](https://github.com/HarbhagwanDhaliwal/AlloraPredictionsHistory/blob/4dd343bd7e03712e72bfbbb45e4a272068fa7c70/excel_sheet.png)
+A powerful Python toolkit for fetching and analyzing prediction market data from the Allora network. Designed for traders, researchers, and data scientists to backtest strategies and analyze market predictions.
 
----
+![Sample Dashboard](https://github.com/HarbhagwanDhaliwal/AlloraPredictionsHistory/blob/main/excel_sheet.png)
 
-## 🚀 Features
+## 🌟 Key Features
 
-- 📊 Fetch historical prediction data from the Allora chain  
-- 📁 Export data to Excel for seamless analysis and integration  
-- 🕒 Support for multiple timeframes: 1 hour, 1 day, 1 week, 1 month  
-- 🌐 Multiple RPC endpoints for reliable data fetching  
-- ⚙️ Automatically handles missing values and RPC timeouts  
+- **Historical Data Collection**: Fetch prediction data directly from Allora chain
+- **Multiple Timeframes**: 1H, 1D, 1W, and 1M historical windows
+- **Reliable Architecture**: 
+  - Multiple RPC endpoint support
+  - Automatic failover and retry logic
+- **Analysis-Ready Output**: 
+  - Clean Excel format with proper formatting
+  - Includes timestamps and predicted values
+- **Smart Error Handling**:
+  - Zero-value detection
+  - Timeout management
 
----
+## 🚀 Quick Start
 
-## 🔧 Prerequisites
+### Prerequisites
 
-Before you get started, ensure the following are installed on your system:
+1. **Install Go** (v1.20+ required):
+   ```bash
+   # Linux/macOS
+   wget https://go.dev/dl/go1.21.4.linux-amd64.tar.gz
+   sudo tar -C /usr/local -xzf go1.21.4.linux-amd64.tar.gz
+   export PATH=$PATH:/usr/local/go/bin
+   ```
 
-1. **Go (required to build and run the Allora chain CLI)**  
-   👉 [Download Go](https://go.dev/dl/)
-
-2. **Allora Chain Binary (`allorad`)**
+2. **Install Allora Chain**:
    ```bash
    git clone https://github.com/allora-network/allora-chain
    cd allora-chain
    make install
-````
-
----
-
-## 📦 Installation
-
-1. Clone this repository:
-
-   ```bash
-   git clone https://github.com/HarbhagwanDhaliwal/AlloraPredictionsHistory.git
-   cd AlloraPredictionsHistory
    ```
 
-2. Create a virtual environment and install dependencies:
-
+3. **Set Up Python Environment**:
    ```bash
-   python3 -m venv venv
-   source venv/bin/activate
-   pip install -r requirements.txt
+   python -m venv venv
+   source venv/bin/activate  # Linux/macOS
+   # OR
+   venv\Scripts\activate    # Windows
    ```
 
----
+### Installation
 
-## 🛠️ Usage
+```bash
+git clone https://github.com/HarbhagwanDhaliwal/AlloraPredictionsHistory.git
+cd AlloraPredictionsHistory
+pip install -r requirements.txt
+```
 
-Run the script using:
+## ⚙️ Configuration
+
+Edit `config.py` to customize:
+
+```python
+RPC_URLS = [
+    "https://allora-rpc.testnet.allora.network",  # Primary endpoint
+    "https://allora-testnet-rpc.polkachu.com",   # Secondary endpoint
+    # Add your private nodes here
+]
+
+# Advanced Settings
+REQUEST_TIMEOUT = 15      # seconds per request
+MAX_RETRIES = 3           # retry attempts
+ZERO_VALUE_COOLDOWN = 60   # seconds to wait after zero values
+```
+
+## 🖥️ Basic Usage
+
+Run the interactive collector:
 
 ```bash
 python main.py
 ```
 
-* You'll be prompted to enter a topic ID and select a timeframe.
-* The script will retrieve prediction data from the allora network chain.
-* The results will be saved to an Excel file (`data\allora_chain_data_topic_{topic_id}.xlsx`) in the project folder.
+Follow the prompts:
+1. Enter Topic ID (e.g., `58` for SOL/USD predictions)
+2. Select Timeframe (1H/1D/1W/1M)
+3. View real-time collection progress
+4. Find your data in `data/allora_chain_data_topic_{ID}.xlsx`
 
----
+## 📊 Output Format
 
-## 📁 Output
+The Excel output contains:
 
-The generated Excel sheet includes:
+| Column             | Description                          | Example Value              |
+|--------------------|--------------------------------------|----------------------------|
+| BLOCK_HEIGHT       | Blockchain block number              | 4077213                    |
+| BLOCK_TIMESTAMP    | ISO-formatted UTC timestamp          | 2025-06-03T18:50:18+00:00  |
+| ALLORA_PREDICTED_VALUE | Network consensus prediction    | -0.0010625262224340856     |
 
-* Block Height
-* Timestamp
-* Allora Predicted Value
+## 🤝 Contributing
 
----
+We welcome contributions from the community! Here's how you can help:
 
-## 📬 Contact
+1. **Report Issues**: Found a bug? Open an issue
+2. **Suggest Features**: Have an idea? Start a discussion
+3. **Submit Pull Requests**
+```
 
-If you have any suggestions, issues, or want to contribute, feel free to open an issue or pull request.
-
----
+Remember to:
+1. Ensure the screenshot path is correct
+2. Verify all links work
+3. Update contact email
+4. Keep the LICENSE file updated
+5. Maintain consistency with your actual project structure
