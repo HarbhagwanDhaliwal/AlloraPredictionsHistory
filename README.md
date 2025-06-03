@@ -1,7 +1,8 @@
 ````markdown
 # 📈 AlloraPredictionsHistory ⏳
 
-**AlloraPredictionsHistory** is a powerful Python utility that fetches historical prediction data from the [Allora Network](https://allora.network/) blockchain. It enables data scientists and researchers to analyze trends, backtest custom strategies, and export prediction data to Excel format effortlessly.
+**AlloraPredictionsHistory** is a powerful Python utility thatfetches historical prediction data from the [Allora Network](https://allora.network/) blockchain.
+It enables data scientists and researchers to analyze trends, backtest custom strategies, and export prediction data to Excel format effortlessly.
 
 ---
 
