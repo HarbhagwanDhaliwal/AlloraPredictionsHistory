@@ -5,7 +5,7 @@ Here's your complete fixed README.md file with proper bold formatting and image 
 
 **AlloraPredictionsHistory** is a Python utility designed to fetch historical prediction data from the [Allora](https://allora.network/) blockchain. This tool allows data scientists and researchers to export structured prediction data into Excel format, enabling them to analyze trends and backtest their own custom strategies.
 
-![Excel Example](https://github.com/user-attachments/assets/1bb1418faadeb324b57a33ba61a98a7b6f32950b/excel_sheet.png)
+![Excel Example](https://raw.githubusercontent.com/HarbhagwanDhaliwal/AlloraPredictionsHistory/1bb1418faadeb324b57a33ba61a98a7b6f32950b/excel_sheet.png)
 
 ## 🌟 Key Features
 
