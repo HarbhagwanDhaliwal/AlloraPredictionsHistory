@@ -1,54 +1,55 @@
-Here's your complete fixed README.md file with proper bold formatting and image display:
+````markdown
+# 📈 AlloraPredictionsHistory ⏳
 
-```markdown
-# AlloraPredictionsHistory 📈⏳
+**AlloraPredictionsHistory** is a powerful Python utility that fetches historical prediction data from the [Allora Network](https://allora.network/) blockchain. It enables data scientists and researchers to analyze trends, backtest custom strategies, and export prediction data to Excel format effortlessly.
 
-**AlloraPredictionsHistory** is a Python utility designed to fetch historical prediction data from the [Allora](https://allora.network/) blockchain. This tool allows data scientists and researchers to export structured prediction data into Excel format, enabling them to analyze trends and backtest their own custom strategies.
+---
 
-![Excel Example](https://raw.githubusercontent.com/HarbhagwanDhaliwal/AlloraPredictionsHistory/54dcd9904874b27d487725c74704c0b2683afc3e/excel_sheet.jpg)
+## 🌟 Features
 
-## 🌟 Key Features
-
-- **Historical Data Collection**: Fetch prediction data directly from Allora chain
-- **Multiple Timeframes**: 1H, 1D, 1W, and 1M historical windows
-- **Reliable Architecture**:
-  - **Multiple RPC endpoint support**
-  - **Automatic failover and retry logic**
-- **Analysis-Ready Output**:
-  - **Clean Excel format** with proper formatting
+- 📊 **Historical Data Collection** – Retrieve blockchain prediction data by topic ID.
+- ⏱️ **Flexible Timeframes** – Choose from 1H, 1D, 1W, or 1M for tailored analysis.
+- 🔁 **Resilient Architecture**
+  - Supports **multiple RPC endpoints**
+  - Built-in **automatic failover** and **retry logic**
+- 📂 **Ready-to-Use Excel Output**
+  - Clean tabular format
   - Includes timestamps and predicted values
-- **Smart Error Handling**:
-  - Zero-value detection
-  - Timeout management
+- ⚠️ **Smart Error Handling**
 
-## 🚀 Quick Start
+---
 
-### Prerequisites
+## 🚀 Getting Started
 
-1. **Install Go** (v1.20+ required):
+### 🧰 Prerequisites
+
+1. **Install Go (v1.20+)**
    ```bash
-   # Linux/macOS
    wget https://go.dev/dl/go1.21.4.linux-amd64.tar.gz
    sudo tar -C /usr/local -xzf go1.21.4.linux-amd64.tar.gz
    export PATH=$PATH:/usr/local/go/bin
-   ```
+````
 
-2. **Install Allora Chain**:
+2. **Install Allora Chain**
+
    ```bash
    git clone https://github.com/allora-network/allora-chain
    cd allora-chain
    make install
    ```
 
-3. **Set Up Python Environment**:
+3. **Create Python Environment**
+
    ```bash
    python -m venv venv
    source venv/bin/activate  # Linux/macOS
-   # OR
-   venv\Scripts\activate    # Windows
+   # or
+   venv\Scripts\activate     # Windows
    ```
 
-### Installation
+---
+
+### 📦 Installation
 
 ```bash
 git clone https://github.com/HarbhagwanDhaliwal/AlloraPredictionsHistory.git
@@ -56,52 +57,60 @@ cd AlloraPredictionsHistory
 pip install -r requirements.txt
 ```
 
+---
+
 ## ⚙️ Configuration
 
-Edit `config.py` to customize:
+Edit `config.py` to suit your needs:
 
 ```python
 RPC_URLS = [
-    "https://allora-rpc.testnet.allora.network",  # Primary endpoint
-    "https://allora-testnet-rpc.polkachu.com",   # Secondary endpoint
-    # Add your private nodes here
+    "https://allora-rpc.testnet.allora.network",  # Primary
+    "https://allora-testnet-rpc.polkachu.com",    # Backup
 ]
 
-# Advanced Settings
-REQUEST_TIMEOUT = 15      # seconds per request
-MAX_RETRIES = 3           # retry attempts
-ZERO_VALUE_COOLDOWN = 60  # seconds to wait after zero values
+REQUEST_TIMEOUT = 15      # Request timeout (seconds)
+MAX_RETRIES = 3           # Max retry attempts
+ZERO_VALUE_COOLDOWN = 60  # Cooldown if zero value detected (seconds)
 ```
 
-## 🖥️ Basic Usage
+---
 
-Run the interactive collector:
+## 🖥️ Usage
+
+Run the interactive script:
 
 ```bash
 python main.py
 ```
 
-Follow the prompts:
-1. Enter Topic ID (e.g., `58` for SOL/USD predictions)
-2. Select Timeframe (1H/1D/1W/1M)
-3. View real-time collection progress
-4. Find your data in `data/allora_chain_data_topic_{ID}.xlsx`
+You'll be prompted to:
+
+1. 🔢 Enter a Topic ID (e.g., `58` for SOL/USD)
+2. 🕒 Select a Timeframe (`1H`, `1D`, `1W`, or `1M`)
+3. ⏳ View collection progress
+4. 📁 Find your output Excel file in `data/allora_chain_data_topic_{ID}.xlsx`
+
+---
 
 ## 📊 Output Format
 
-The Excel output contains:
+The resulting Excel file includes:
 
-| Column             | Description                          | Example Value              |
-|--------------------|--------------------------------------|----------------------------|
-| BLOCK_HEIGHT       | Blockchain block number              | 4077213                    |
-| BLOCK_TIMESTAMP    | ISO-formatted UTC timestamp          | 2025-06-03T18:50:18+00:00  |
-| ALLORA_PREDICTED_VALUE | Network consensus prediction    | -0.0010625262224340856     |
+| Column                   | Description                     | Example                     |
+| ------------------------ | ------------------------------- | --------------------------- |
+| `BLOCK_HEIGHT`           | Block number on the chain       | `4077213`                   |
+| `BLOCK_TIMESTAMP`        | UTC timestamp (ISO 8601 format) | `2025-06-03T18:50:18+00:00` |
+| `ALLORA_PREDICTED_VALUE` | Network consensus prediction    | `-0.0010625262224340856`    |
+
+---
 
 ## 🤝 Contributing
 
-We welcome contributions from the community! Here's how you can help:
+We’d love your help! Here’s how you can contribute:
 
-1. **Report Issues**: Found a bug? Open an issue
-2. **Suggest Features**: Have an idea? Start a discussion
-3. **Submit Pull Requests**
-```
+* 🐞 **Report Issues** – Found a bug? Open an issue.
+* 💡 **Suggest Features** – Have an idea? Let’s discuss.
+* 🔧 **Pull Requests** – Improve code, docs, or features.
+
+---
