@@ -1,11 +1,7 @@
 ```markdown
 # AlloraPredictionsHistory 📈⏳
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
-[![Allora Chain](https://img.shields.io/badge/Allora-Chain-brightgreen)](https://github.com/allora-network/allora-chain)
-
-A powerful Python toolkit for fetching and analyzing prediction market data from the Allora network. Designed for traders, researchers, and data scientists to backtest strategies and analyze market predictions.
+**AlloraPredictionsHistory** is a Python utility designed to fetch historical prediction data from the [Allora](https://allora.network/) blockchain. This tool allows data scientists and researchers to export structured prediction data into Excel format, enabling them to analyze trends and backtest their own custom strategies.
 
 ![Sample Dashboard](https://github.com/HarbhagwanDhaliwal/AlloraPredictionsHistory/blob/main/excel_sheet.png)
 
