@@ -1,19 +1,21 @@
+Here's your complete fixed README.md file with proper bold formatting and image display:
+
 ```markdown
 # AlloraPredictionsHistory 📈⏳
 
 **AlloraPredictionsHistory** is a Python utility designed to fetch historical prediction data from the [Allora](https://allora.network/) blockchain. This tool allows data scientists and researchers to export structured prediction data into Excel format, enabling them to analyze trends and backtest their own custom strategies.
 
-![Excel Example](https://raw.githubusercontent.com/HarbhagwanDhaliwal/AlloraPredictionsHistory/master/excel_sheet.png)
+![Excel Example](https://github.com/user-attachments/assets/1e9393b6-60c1-4fc6-a09d-708f0e71b4c5)
 
 ## 🌟 Key Features
 
 - **Historical Data Collection**: Fetch prediction data directly from Allora chain
 - **Multiple Timeframes**: 1H, 1D, 1W, and 1M historical windows
-- **Reliable Architecture**: 
-  - Multiple RPC endpoint support
-  - Automatic failover and retry logic
-- **Analysis-Ready Output**: 
-  - Clean Excel format with proper formatting
+- **Reliable Architecture**:
+  - **Multiple RPC endpoint support**
+  - **Automatic failover and retry logic**
+- **Analysis-Ready Output**:
+  - **Clean Excel format** with proper formatting
   - Includes timestamps and predicted values
 - **Smart Error Handling**:
   - Zero-value detection
@@ -68,7 +70,7 @@ RPC_URLS = [
 # Advanced Settings
 REQUEST_TIMEOUT = 15      # seconds per request
 MAX_RETRIES = 3           # retry attempts
-ZERO_VALUE_COOLDOWN = 60   # seconds to wait after zero values
+ZERO_VALUE_COOLDOWN = 60  # seconds to wait after zero values
 ```
 
 ## 🖥️ Basic Usage
@@ -103,10 +105,3 @@ We welcome contributions from the community! Here's how you can help:
 2. **Suggest Features**: Have an idea? Start a discussion
 3. **Submit Pull Requests**
 ```
-
-Remember to:
-1. Ensure the screenshot path is correct
-2. Verify all links work
-3. Update contact email
-4. Keep the LICENSE file updated
-5. Maintain consistency with your actual project structure
